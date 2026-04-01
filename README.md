@@ -72,25 +72,15 @@ This is a new way of building. The tools have changed what's possible for founde
 ### Languages
 ![Languages](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.languages.svg)
 
-### Coding Habits (Last 30 Days)
+### Coding Habits
 ![Habits](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.habits.svg)
 
 ### Recent Activity
 ![Activity](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.activity.svg)
 
-### GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=umg-gpt&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-</p>
-
 ### Streak
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=umg-gpt&theme=tokyonight" alt="Streak" />
-</p>
-
-### Trophies
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=umg-gpt&theme=algolia&no-frame=true&column=4&margin-w=15&margin-h=15" alt="Trophies" />
 </p>
 
 ---
