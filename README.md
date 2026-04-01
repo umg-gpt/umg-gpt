@@ -1,0 +1,99 @@
+<div align="center">
+
+# Umang Gupta
+
+**AI-Native Builder · Founder · Mumbai**
+
+*Building production infrastructure with AI tools — no traditional coding background.*
+
+[![](https://img.shields.io/badge/MoltPe-Payment%20Infra%20for%20AI%20Agents-black?style=for-the-badge&logo=ethereum)](https://moltpe.com)
+[![](https://img.shields.io/badge/x402-Coinbase%20Protocol-blue?style=for-the-badge)](https://x402.org)
+[![](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-purple?style=for-the-badge)](https://modelcontextprotocol.io)
+
+</div>
+
+---
+
+## What I'm Building
+
+### [MoltPe](https://moltpe.com) — Payment Infrastructure for AI Agents
+AI agents need wallets. MoltPe gives every agent its own isolated USDC wallet with spending limits, policy enforcement, and the ability to pay for things autonomously — no human in the loop.
+
+- Agents pay for API calls via **x402** (Coinbase's HTTP 402 payment protocol)
+- AI assistants (Claude, ChatGPT) control payments via **MCP** (Model Context Protocol)
+- Multi-chain: **Base**, **Polygon**, **Tempo** (Arc testnet)
+- Full dashboard for humans to oversee agent spending
+
+```
+Agent → MoltPe Wallet → x402 Paywall → API Response
+         ↑
+    Claude / ChatGPT via MCP tools
+```
+
+### [raah](https://github.com/umg-gpt/raah) — Vedic Astrology AI
+AI-native astrology app built on a deterministic Vedic computation engine (Swiss Ephemeris + FastAPI). Real Panchang calculations, natal charts, AI chat — not just ChatGPT with astrology prompts.
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| **Runtime** | Node.js, Python (FastAPI) |
+| **Frontend** | React, Vite, Tailwind |
+| **Database** | Supabase (PostgreSQL + Auth) |
+| **Blockchain** | viem, Coinbase x402 SDK, USDC |
+| **AI** | Claude (MCP), OpenAI |
+| **Infra** | GCP Cloud Run, Docker, Cloud Build CI/CD |
+| **Protocols** | x402, MPP, MCP, HTTP 402 |
+
+---
+
+## How I Build
+
+I'm a non-technical founder. Every line of production code in my repos is written by AI (Claude Code, Lovable, Replit Agent) — directed, reviewed, and debugged by me.
+
+This is a new way of building. The tools have changed what's possible for founders without a CS background. What used to require a 3-person engineering team, I ship solo.
+
+**Last 90 days:**
+- 700+ commits across 8 repos
+- Production blockchain payment infrastructure
+- MCP server with 5 agent tools
+- 40+ unit tests
+- Multi-chain USDC settlement
+- Two live products
+
+---
+
+## Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=umg-gpt&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true&custom_title=GitHub+Activity)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=umg-gpt&theme=dark&hide_border=true&layout=compact&count_private=true)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=umg-gpt&theme=dark&hide_border=true)
+
+</div>
+
+---
+
+## Timeline
+
+| | |
+|---|---|
+| **Jan 2026** | Started raah — Vedic astrology AI with real computation engine |
+| **Feb 2026** | Built and scrapped 5 crypto wallet prototypes (fast learning) |
+| **Feb 2026** | Launched MoltPe — pivot to AI payment infrastructure |
+| **Mar 2026** | Integrated Coinbase x402 SDK + MCP server |
+| **Mar 2026** | Added Base chain + MPP paywall protocol |
+| **Apr 2026** | Multi-chain, 40+ tests, live on moltpe.com |
+
+---
+
+<div align="center">
+
+**moltpe.com** · [x402 Protocol](https://x402.org) · [MCP Docs](https://modelcontextprotocol.io)
+
+</div>
