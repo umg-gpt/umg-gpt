@@ -53,7 +53,7 @@ I'm a non-technical founder. Every line of production code in my repos is writte
 This is a new way of building. The tools have changed what's possible for founders without a CS background. What used to require a 3-person engineering team, I ship solo.
 
 **Last 90 days:**
-- 700+ commits
+- 500+ commits
 - Production blockchain payment infrastructure
 - MCP server with 5 agent tools
 - 40+ unit tests
@@ -66,21 +66,17 @@ This is a new way of building. The tools have changed what's possible for founde
 ### Profile Overview
 ![Metrics](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.svg)
 
-### Contribution Calendar (Last 180 Days)
-![Calendar](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.calendar.svg)
-
 ### Languages
 ![Languages](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.languages.svg)
-
-### Coding Habits
-![Habits](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.habits.svg)
-
-### Recent Activity
-![Activity](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.activity.svg)
 
 ### Streak
 <p align="center">
   <img src="https://streak-stats.demolab.com/?user=umg-gpt&theme=tokyonight" alt="Streak" />
+</p>
+
+### GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=umg-gpt&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub Stats" />
 </p>
 
 ---

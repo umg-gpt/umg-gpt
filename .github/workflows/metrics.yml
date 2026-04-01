@@ -1,7 +1,6 @@
 # Generates GitHub profile metric SVGs and commits them to this repo.
-# Pinned to v3.34 (stable) — @latest had bugs in habits/activity plugins.
-# output_action: pull-push prevents SHA mismatch on consecutive runs.
-# commits_authoring covers all identities found across repos.
+# Only Profile Overview + Languages — habits/activity/calendar removed (broken for private-only accounts).
+# Pinned to v3.34 for stability.
 
 name: Metrics
 
@@ -20,7 +19,6 @@ jobs:
 
     steps:
 
-      # ===== 1. PROFILE OVERVIEW =====
       - name: Profile Overview
         uses: lowlighter/metrics@v3.34
         with:
@@ -30,31 +28,18 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
           commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
-          output_action: pull-push
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
+          plugins_errors_fatal: no
+          output_action: commit
+          committer_message: "chore: update metrics"
+          config_output: svg
 
-      # ===== 2. ISOMETRIC CALENDAR (half-year) =====
-      - name: Isometric Calendar
-        if: always()
-        uses: lowlighter/metrics@v3.34
-        with:
-          filename: metrics.calendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: umg-gpt
-          base: ""
-          config_timezone: Asia/Kolkata
-          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
-          output_action: pull-push
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-      # ===== 3. LANGUAGES =====
       - name: Languages
-        if: always()
         uses: lowlighter/metrics@v3.34
+        if: always()
         with:
           filename: metrics.languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -62,51 +47,15 @@ jobs:
           base: ""
           config_timezone: Asia/Kolkata
           commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
-          output_action: pull-push
           plugin_languages: yes
           plugin_languages_ignored: html, css, less, dockerfile, makefile, shell, nix, procfile
-          plugin_languages_sections: most-used
+          plugin_languages_sections: most-used, recently-used
           plugin_languages_details: percentage, bytes-size
           plugin_languages_limit: 8
-          plugin_languages_indepth: yes
-          plugin_languages_analysis_timeout: 45
-
-      # ===== 4. CODING HABITS =====
-      - name: Coding Habits
-        if: always()
-        uses: lowlighter/metrics@v3.34
-        with:
-          filename: metrics.habits.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: umg-gpt
-          base: ""
-          config_timezone: Asia/Kolkata
-          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
-          output_action: pull-push
+          plugin_languages_recent_load: 300
+          plugin_languages_recent_days: 30
+          plugin_languages_indepth: no
+          plugin_languages_analysis_timeout: 30
           plugins_errors_fatal: no
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_from: 100
-          plugin_habits_days: 14
-          plugin_habits_trim: yes
-
-      # ===== 5. RECENT ACTIVITY =====
-      - name: Recent Activity
-        if: always()
-        uses: lowlighter/metrics@v3.34
-        with:
-          filename: metrics.activity.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: umg-gpt
-          base: ""
-          config_timezone: Asia/Kolkata
-          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
-          output_action: pull-push
-          plugins_errors_fatal: no
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_days: 14
-          plugin_activity_filter: push, pr, release
-          plugin_activity_visibility: public
+          output_action: commit
+          config_output: svg
