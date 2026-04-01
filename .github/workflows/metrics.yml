@@ -1,27 +1,26 @@
-# Generates GitHub profile metrics as SVG images and commits them to this repo.
-# Runs every 12 hours, on every push to main, and can be triggered manually.
-# Requires METRICS_TOKEN secret (GitHub PAT with repo + read:user scopes).
-# commits_authoring covers local git identity "UG" so private commits are counted.
+# Generates GitHub profile metric SVGs and commits them to this repo.
+# Fix: output_action: pull-push on every step prevents SHA mismatch failures.
+# commits_authoring covers all identities found across repos.
 
 name: Metrics
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # Every 12 hours
-  workflow_dispatch:           # Manual trigger from Actions tab
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches: ["main"]
 
 jobs:
-  metrics:
+  github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
 
-      # ── 1. Main profile header + activity + lines ──────────────────
-      - name: Main stats
+      # ===== 1. PROFILE OVERVIEW =====
+      - name: Profile Overview
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.svg
@@ -29,14 +28,15 @@ jobs:
           user: umg-gpt
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
-          commits_authoring: UG, ug@UGs-MacBook-Pro.local, umg-gpt
+          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
+          output_action: pull-push
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
 
-      # ── 2. Contribution calendar — half year ───────────────────────
-      - name: Contribution calendar
+      # ===== 2. ISOMETRIC CALENDAR (half-year) =====
+      - name: Isometric Calendar
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.calendar.svg
@@ -44,11 +44,12 @@ jobs:
           user: umg-gpt
           base: ""
           config_timezone: Asia/Kolkata
-          commits_authoring: UG, ug@UGs-MacBook-Pro.local, umg-gpt
+          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
+          output_action: pull-push
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
-      # ── 3. Languages breakdown ─────────────────────────────────────
+      # ===== 3. LANGUAGES =====
       - name: Languages
         uses: lowlighter/metrics@latest
         with:
@@ -57,19 +58,20 @@ jobs:
           user: umg-gpt
           base: ""
           config_timezone: Asia/Kolkata
-          commits_authoring: UG, ug@UGs-MacBook-Pro.local, umg-gpt
+          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
+          output_action: pull-push
           plugin_languages: yes
-          plugin_languages_ignored: html, css, less, dockerfile, makefile, shell
+          plugin_languages_ignored: html, css, less, dockerfile, makefile, shell, nix, procfile
           plugin_languages_sections: most-used, recently-used
-          plugin_languages_details: percentage, bytes-size, lines
+          plugin_languages_details: percentage, bytes-size
           plugin_languages_limit: 8
-          plugin_languages_recent_load: 500
+          plugin_languages_recent_load: 300
           plugin_languages_recent_days: 30
-          plugin_languages_indepth: yes
+          plugin_languages_indepth: no
           plugin_languages_analysis_timeout: 30
 
-      # ── 4. Coding habits ───────────────────────────────────────────
-      - name: Coding habits
+      # ===== 4. CODING HABITS =====
+      - name: Coding Habits
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.habits.svg
@@ -77,17 +79,18 @@ jobs:
           user: umg-gpt
           base: ""
           config_timezone: Asia/Kolkata
-          commits_authoring: UG, ug@UGs-MacBook-Pro.local, umg-gpt
+          commits_authoring: UG, Umang Gupta, Umg Gpt, umg-gpt, OpenClaw Agent, umang13, umang8, ug@UGs-MacBook-Pro.local, umg.gpt@gmail.com, umang@moltpe.com
+          output_action: pull-push
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
-          plugin_habits_from: 500
+          plugin_habits_from: 200
           plugin_habits_days: 30
           plugin_habits_trim: yes
 
-      # ── 5. Recent activity feed ────────────────────────────────────
-      - name: Recent activity
+      # ===== 5. RECENT ACTIVITY =====
+      - name: Recent Activity
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.activity.svg
@@ -95,8 +98,9 @@ jobs:
           user: umg-gpt
           base: ""
           config_timezone: Asia/Kolkata
+          output_action: pull-push
           plugin_activity: yes
           plugin_activity_limit: 5
-          plugin_activity_days: 14
-          plugin_activity_filter: commit, push, issue, pr, release
+          plugin_activity_days: 30
+          plugin_activity_filter: commit, push, pr, release
           plugin_activity_visibility: all
