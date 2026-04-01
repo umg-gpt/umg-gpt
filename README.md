@@ -30,16 +30,13 @@ Agent → MoltPe Wallet → x402 Paywall → API Response
     Claude / ChatGPT via MCP tools
 ```
 
-### raah — Vedic Astrology AI
-AI-native astrology app built on a deterministic Vedic computation engine (Swiss Ephemeris + FastAPI). Real Panchang calculations, natal charts, AI chat — not just ChatGPT with astrology prompts.
-
 ---
 
 ## Stack
 
 | | |
 |---|---|
-| **Runtime** | Node.js, Python (FastAPI) |
+| **Runtime** | Node.js |
 | **Frontend** | React, Vite, Tailwind |
 | **Database** | Supabase (PostgreSQL + Auth) |
 | **Blockchain** | viem, Coinbase x402 SDK, USDC |
@@ -56,12 +53,11 @@ I'm a non-technical founder. Every line of production code in my repos is writte
 This is a new way of building. The tools have changed what's possible for founders without a CS background. What used to require a 3-person engineering team, I ship solo.
 
 **Last 90 days:**
-- 700+ commits across 8 repos
+- 700+ commits
 - Production blockchain payment infrastructure
 - MCP server with 5 agent tools
 - 40+ unit tests
-- Multi-chain USDC settlement
-- Two live products
+- Multi-chain USDC settlement on Base, Polygon, and Tempo
 
 ---
 
@@ -81,7 +77,7 @@ This is a new way of building. The tools have changed what's possible for founde
 
 | | |
 |---|---|
-| **Jan 2026** | Started raah — Vedic astrology AI with real computation engine |
+| **Jan 2026** | Started exploring AI-native product ideas |
 | **Feb 2026** | Built and scrapped 5 crypto wallet prototypes (fast learning) |
 | **Feb 2026** | Launched MoltPe — pivot to AI payment infrastructure |
 | **Mar 2026** | Integrated Coinbase x402 SDK + MCP server |
