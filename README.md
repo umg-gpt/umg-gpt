@@ -2,7 +2,7 @@
 
 # Umang Gupta
 
-**AI-Native Builder · Founder · Mumbai**
+**AI-Native Builder · Founder · India**
 
 *Building production infrastructure with AI tools — no traditional coding background.*
 
