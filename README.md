@@ -30,7 +30,7 @@ Agent → MoltPe Wallet → x402 Paywall → API Response
     Claude / ChatGPT via MCP tools
 ```
 
-### [raah](https://github.com/umg-gpt/raah) — Vedic Astrology AI
+### raah — Vedic Astrology AI
 AI-native astrology app built on a deterministic Vedic computation engine (Swiss Ephemeris + FastAPI). Real Panchang calculations, natal charts, AI chat — not just ChatGPT with astrology prompts.
 
 ---
@@ -69,11 +69,9 @@ This is a new way of building. The tools have changed what's possible for founde
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=umg-gpt&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true&custom_title=GitHub+Activity)
+![Metrics](metrics.svg)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=umg-gpt&theme=dark&hide_border=true&layout=compact&count_private=true)
-
-![GitHub Streak](https://streak-stats.demolab.com?user=umg-gpt&theme=dark&hide_border=true)
+![Calendar](metrics.calendar.svg)
 
 </div>
 
