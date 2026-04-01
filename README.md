@@ -63,13 +63,20 @@ This is a new way of building. The tools have changed what's possible for founde
 
 ## Stats
 
-<div align="center">
+### Profile Overview
+![Metrics](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.svg)
 
-![Metrics](metrics.svg)
+### Contribution Calendar (Last 180 Days)
+![Calendar](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.calendar.svg)
 
-![Calendar](metrics.calendar.svg)
+### Languages
+![Languages](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.languages.svg)
 
-</div>
+### Coding Habits (Last 30 Days)
+![Habits](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.habits.svg)
+
+### Recent Activity
+![Activity](https://github.com/umg-gpt/umg-gpt/raw/main/metrics.activity.svg)
 
 ---
 
