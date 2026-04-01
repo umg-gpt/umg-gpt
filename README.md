@@ -10,6 +10,10 @@
 [![](https://img.shields.io/badge/x402-Coinbase%20Protocol-blue?style=for-the-badge)](https://x402.org)
 [![](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-purple?style=for-the-badge)](https://modelcontextprotocol.io)
 
+[![Security Headers: A](https://img.shields.io/badge/Security%20Headers-A-brightgreen?style=for-the-badge)](https://securityheaders.com/?q=moltpe.com&followRedirects=on)
+[![Mozilla Observatory: B+](https://img.shields.io/badge/Mozilla%20Observatory-B+-blue?style=for-the-badge)](https://observatory.mozilla.org/analyze/moltpe.com)
+[![0 Critical Findings](https://img.shields.io/badge/Critical%20Findings-0-brightgreen?style=for-the-badge)](https://moltpe.com/security)
+
 </div>
 
 ---
@@ -53,11 +57,45 @@ I'm a non-technical founder. Every line of production code in my repos is writte
 This is a new way of building. The tools have changed what's possible for founders without a CS background. What used to require a 3-person engineering team, I ship solo.
 
 **Last 90 days:**
-- 500+ commits
+- 670+ commits
 - Production blockchain payment infrastructure
 - MCP server with 5 agent tools
 - 40+ unit tests
 - Multi-chain USDC settlement on Base, Polygon, and Tempo
+
+---
+
+## Security
+
+MoltPe handles real money — security is non-negotiable. Every layer is hardened, scanned, and independently verified.
+
+**[Full Security Report →](https://moltpe.com/security)**
+
+### Independent Scan Grades
+
+| Scanner | Grade | Verify |
+|---------|-------|--------|
+| **SecurityHeaders.com** | **A** | [Scan →](https://securityheaders.com/?q=moltpe.com&followRedirects=on) |
+| **Mozilla Observatory** | **B+** | [Scan →](https://observatory.mozilla.org/analyze/moltpe.com) |
+
+### Infrastructure
+
+* **GCP Cloud Run** — managed TLS, auto-scaling, DDoS protection
+* **Supabase PostgreSQL** — AES-256 encryption at rest, Row Level Security
+* **GCP Security Command Center Premium** — continuous vulnerability scanning
+* **CIS Google Cloud Foundation Benchmark** — compliance mapped
+
+### Payment Security
+
+* Atomic DB guards preventing double-spend
+* Idempotency keys preventing duplicate transactions
+* On-chain USDC settlement — every payment verifiable on blockchain
+* Isolated agent wallets — agents never access user funds
+
+[![Security Headers](https://img.shields.io/badge/Security%20Headers-A-brightgreen?style=flat-square)](https://securityheaders.com/?q=moltpe.com&followRedirects=on)
+[![Mozilla Observatory](https://img.shields.io/badge/Mozilla%20Observatory-B+-blue?style=flat-square)](https://observatory.mozilla.org/analyze/moltpe.com)
+[![0 Critical Findings](https://img.shields.io/badge/Critical%20Findings-0-brightgreen?style=flat-square)](#)
+[![0 npm Vulnerabilities](https://img.shields.io/badge/npm%20Vulnerabilities-0-brightgreen?style=flat-square)](#)
 
 ---
 
