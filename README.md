@@ -74,11 +74,6 @@ This is a new way of building. The tools have changed what's possible for founde
   <img src="https://streak-stats.demolab.com/?user=umg-gpt&theme=tokyonight" alt="Streak" />
 </p>
 
-### GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=umg-gpt&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-</p>
-
 ---
 
 ## Timeline
