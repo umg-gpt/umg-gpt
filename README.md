@@ -11,8 +11,9 @@
 [![](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-purple?style=for-the-badge)](https://modelcontextprotocol.io)
 
 [![Security Headers: A](https://img.shields.io/badge/Security%20Headers-A-brightgreen?style=for-the-badge)](https://securityheaders.com/?q=moltpe.com&followRedirects=on)
-[![Mozilla Observatory: B+](https://img.shields.io/badge/Mozilla%20Observatory-B+-blue?style=for-the-badge)](https://observatory.mozilla.org/analyze/moltpe.com)
-[![0 Critical Findings](https://img.shields.io/badge/Critical%20Findings-0-brightgreen?style=for-the-badge)](https://moltpe.com/security)
+[![Mozilla Observatory: B+](https://img.shields.io/badge/Mozilla%20Observatory-B+-blue?style=for-the-badge)](https://developer.mozilla.org/en-US/observatory/analyze?host=moltpe.com)
+[![128/128 Tests](https://img.shields.io/badge/Tests-128%2F128%20Passing-brightgreen?style=for-the-badge)](https://moltpe.com/quality)
+[![0 Vulnerabilities](https://img.shields.io/badge/npm%20audit-0%20Vulnerabilities-brightgreen?style=for-the-badge)](https://moltpe.com/quality)
 
 </div>
 
@@ -36,16 +37,36 @@ Agent → MoltPe Wallet → x402 Paywall → API Response
 
 ---
 
+## Code Quality
+
+Every metric is from the live production codebase. **[Full report →](https://moltpe.com/quality)**
+
+| Metric | Value |
+|--------|-------|
+| Test suite | 128/128 passing (100%) |
+| npm audit | 0 vulnerabilities |
+| Backend dependencies | 10 |
+| Frontend dependencies | 2 |
+| Codebase | ~13,200 lines |
+| eval() usage | 0 |
+| License compliance | 100% permissive |
+
+**Architecture:** Three-layer auth · Atomic double-spend protection · AES-256-GCM encryption · Centralized payment pipeline · Multi-chain by configuration · 50+ engineering lessons
+
+**Verify live:** [SecurityHeaders.com](https://securityheaders.com/?q=moltpe.com&followRedirects=on) · [API Health](https://moltpe.com/health) · [Security Report](https://moltpe.com/security) · [Code Quality](https://moltpe.com/quality)
+
+---
+
 ## Stack
 
 | | |
 |---|---|
 | **Runtime** | Node.js |
-| **Frontend** | React, Vite, Tailwind |
+| **Frontend** | React, Vite |
 | **Database** | Supabase (PostgreSQL + Auth) |
-| **Blockchain** | viem, Coinbase x402 SDK, USDC |
+| **Settlement** | viem, Coinbase x402 SDK, USDC |
 | **AI** | Claude (MCP), OpenAI |
-| **Infra** | GCP Cloud Run, Docker, Cloud Build CI/CD |
+| **Infra** | GCP Cloud Run, Cloud Build CI/CD |
 | **Protocols** | x402, MPP, MCP, HTTP 402 |
 
 ---
@@ -58,10 +79,10 @@ This is a new way of building. The tools have changed what's possible for founde
 
 **Last 90 days:**
 - 670+ commits
-- Production blockchain payment infrastructure
+- Production payment infrastructure
 - MCP server with 5 agent tools
-- 40+ unit tests
-- Multi-chain USDC settlement on Base, Polygon, and Tempo
+- 128 unit tests
+- Multi-chain USDC settlement
 
 ---
 
@@ -69,31 +90,17 @@ This is a new way of building. The tools have changed what's possible for founde
 
 MoltPe handles real money — security is non-negotiable. Every layer is hardened, scanned, and independently verified.
 
-**[Full Security Report →](https://moltpe.com/security)**
+**[Full Security Report →](https://moltpe.com/security)** · **[Code Quality Report →](https://moltpe.com/quality)**
 
 ### Independent Scan Grades
 
 | Scanner | Grade | Verify |
 |---------|-------|--------|
 | **SecurityHeaders.com** | **A** | [Scan →](https://securityheaders.com/?q=moltpe.com&followRedirects=on) |
-| **Mozilla Observatory** | **B+** | [Scan →](https://observatory.mozilla.org/analyze/moltpe.com) |
-
-### Infrastructure
-
-* **GCP Cloud Run** — managed TLS, auto-scaling, DDoS protection
-* **Supabase PostgreSQL** — AES-256 encryption at rest, Row Level Security
-* **GCP Security Command Center Premium** — continuous vulnerability scanning
-* **CIS Google Cloud Foundation Benchmark** — compliance mapped
-
-### Payment Security
-
-* Atomic DB guards preventing double-spend
-* Idempotency keys preventing duplicate transactions
-* On-chain USDC settlement — every payment verifiable on blockchain
-* Isolated agent wallets — agents never access user funds
+| **Mozilla Observatory** | **B+** | [Scan →](https://developer.mozilla.org/en-US/observatory/analyze?host=moltpe.com) |
 
 [![Security Headers](https://img.shields.io/badge/Security%20Headers-A-brightgreen?style=flat-square)](https://securityheaders.com/?q=moltpe.com&followRedirects=on)
-[![Mozilla Observatory](https://img.shields.io/badge/Mozilla%20Observatory-B+-blue?style=flat-square)](https://observatory.mozilla.org/analyze/moltpe.com)
+[![Mozilla Observatory](https://img.shields.io/badge/Mozilla%20Observatory-B+-blue?style=flat-square)](https://developer.mozilla.org/en-US/observatory/analyze?host=moltpe.com)
 [![0 Critical Findings](https://img.shields.io/badge/Critical%20Findings-0-brightgreen?style=flat-square)](#)
 [![0 npm Vulnerabilities](https://img.shields.io/badge/npm%20Vulnerabilities-0-brightgreen?style=flat-square)](#)
 
@@ -119,16 +126,16 @@ MoltPe handles real money — security is non-negotiable. Every layer is hardene
 | | |
 |---|---|
 | **Jan 2026** | Started exploring AI-native product ideas |
-| **Feb 2026** | Built and scrapped 5 crypto wallet prototypes (fast learning) |
+| **Feb 2026** | Built and scrapped 5 prototypes (fast learning) |
 | **Feb 2026** | Launched MoltPe — pivot to AI payment infrastructure |
 | **Mar 2026** | Integrated Coinbase x402 SDK + MCP server |
 | **Mar 2026** | Added Base chain + MPP paywall protocol |
-| **Apr 2026** | Multi-chain, 40+ tests, live on moltpe.com |
+| **Apr 2026** | 128 tests, centralized payment pipeline, live on moltpe.com |
 
 ---
 
 <div align="center">
 
-**moltpe.com** · [x402 Protocol](https://x402.org) · [MCP Docs](https://modelcontextprotocol.io)
+**moltpe.com** · [Code Quality](https://moltpe.com/quality) · [Security](https://moltpe.com/security) · [x402 Protocol](https://x402.org) · [MCP Docs](https://modelcontextprotocol.io)
 
 </div>
